@@ -1,0 +1,4 @@
+{
+	"mongoURL": "mongodb+srv://basnet:BKfJOVDNrqScaAuv@cluster0-lhfyg.mongodb.net/Collab?retryWrites=true&w=majority",
+	"secret": "loveyoubabes"
+}
