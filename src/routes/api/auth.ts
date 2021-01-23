@@ -16,6 +16,16 @@ router.get('/', auth, async (req, res) => {
 	}
 });
 
+router.get('/test',async (req,res)=>{
+	try{
+		res.send("hello")
+	}catch (err){
+
+	}finally {
+		res.json("hello")
+	}
+})
+
 router.get('/:id', async (req, res) => {
 	console.log(req.params.id);
 	try {

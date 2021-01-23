@@ -1,3 +1,8 @@
 
 npm install
 npm run dev
+
+
+## Backend Api
+ Auth Api => /api/auth/{id}
+ 

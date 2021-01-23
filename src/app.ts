@@ -7,12 +7,14 @@ const server = http.createServer(app);
 const socketio = require('socket.io');
 const io = socketio(server);
 const path = require('path');
+const cors = require('cors');
 // const socket = io();
 connectDb();
-
-let interval: any;
+//
 // io connection to client
-io.on('connection', (socket: any) => {
+io.on("connection" , (socket: any) => {
+	let interval: any;
+
 	if (interval) {
 		clearInterval(interval);
 	}
@@ -26,6 +28,7 @@ io.on('connection', (socket: any) => {
 
 ///intialized middle ware
 app.use(bodyparser.json());
+app.use(cors());
 const port = 5000;
 //Define Routes
 app.use('/api/users', require('./routes/api/users'));
@@ -51,3 +54,4 @@ const getApiAndEmit = (socket: any) => {
 app.listen(process.env.PORT || port, () => {
 	console.log(`Running in port in port ${port}`);
 });
+module.exports =app;
