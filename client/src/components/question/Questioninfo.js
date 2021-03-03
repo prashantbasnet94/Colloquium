@@ -14,6 +14,8 @@ import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import Container from '@material-ui/core/Container';
 import Comment from './Comment';
+import Iframe from 'react-iframe'
+
 const Questioninfo = (props) => {
 	// useEffect(() => {
 	// 	let id = props.location.state._id;
@@ -52,9 +54,17 @@ const Questioninfo = (props) => {
 							<h1 className="ques text-primary">{ques.problem}</h1>
 							<p className={classes.textel}>Asked</p>
 							<p className={classes.texttel2}>subject {ques.subject}</p>
+
 						</Paper>
 						<Grid item xs={12}>
-							<Paper className={classes.paper}>{ques.link}</Paper>
+							<Iframe url={ques.link}
+									width="450px"
+									height="450px"
+									id="myId"
+									className="myClassname"
+									display="initial"
+									position="relative"/>
+
 						</Grid>
 					</Grid>
 					<Comment id={props.location.state._id} />

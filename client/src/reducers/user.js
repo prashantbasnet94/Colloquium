@@ -16,6 +16,7 @@ export default function (state = initialState, action) {
 			};
 		case LOAD_ERROR:
 			// localStorage.removeItem('token');
+			console.log(payload)
 			return {
 				...state,
 				loading: false,
