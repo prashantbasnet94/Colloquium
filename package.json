@@ -1,5 +1,4 @@
 {
-
 	"name": "tutorconnect",
 	"version": "1.0.0",
 	"description": "",
@@ -10,9 +9,7 @@
 		"client": "npm start --prefix client",
 		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
 		"dev": "concurrently \"npm run server\" \"npm run client\"",
-		"test": "jest",
-		"tsc": "tsc",
-		"postinstall": "npm run tsc"
+		"test": "jest"
 	},
 	"author": "",
 	"license": "ISC",
