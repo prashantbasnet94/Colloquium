@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fae51219-f39d-456c-858e-eff80b5d8aa9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/layout/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/layout/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/api/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/api/auth.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,11 +87,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="459" y="259" key="#com.intellij.fileTypes.FileTypeChooser/-1288.108.1288.946/0.0.1440.900@0.0.1440.900" timestamp="1611411779519" />
-    <state x="500" y="246" width="568" height="490" key="find.popup" timestamp="1614800251944">
+    <state x="500" y="246" width="574" height="490" key="find.popup" timestamp="1615237280049">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="2107" y="230" width="586" height="490" key="find.popup/0.0.1440.900/3360.-151.1920.1080/1440.-65.1920.1080@1440.-65.1920.1080" timestamp="1611275222628" />
-    <state x="500" y="246" width="568" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1614800251944" />
+    <state x="500" y="246" width="574" height="490" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1615237280049" />
     <state x="500" y="246" width="568" height="490" key="find.popup/1440.-160.1288.946/0.0.1440.900@0.0.1440.900" timestamp="1614625365902" />
   </component>
 </project>

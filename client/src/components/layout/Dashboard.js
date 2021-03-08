@@ -20,6 +20,7 @@ const Dashboard = ({
 	const viewall = () => {
 		loadQuestions();
 	};
+	useEffect(()=>viewall(),[])
 	return questions ? (
 		<Container component="main">
 			<p>You want to get solution for any problem</p>

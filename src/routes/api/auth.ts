@@ -61,7 +61,7 @@ router.post(
 								id: user.id,
 							},
 						};
-						const token = JWT.sign(payload, secret, { expiresIn: 36000 });
+						const token = JWT.sign(payload, secret, { expiresIn: '7d' });
 						res.json({ token });
 					} else {
 						res.status(400).json({ errors: [{ msg: 'Invalid credentials' }] });
