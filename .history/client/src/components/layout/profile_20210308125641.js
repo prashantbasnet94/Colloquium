@@ -36,15 +36,13 @@ const Ques = ({ loadQuestionById, match, userQuestions, loading, user }) => {
 
 	return !loading ? (
 		<div className={classes.root}>
-			{/* {user._id ? ( */}
+
 			<Link to="/create-question" style={{ textDecoration: 'none' }}>
 				<Button style={{ background: 'green', color: 'white' }}>
 					Add Event
 					</Button>
 			</Link>
-			{/* ) : (
-				<p></p>
-			)} */}
+
 			<Grid container spacing={4}>
 				<Grid item lg={4} md={6} xl={4} xs={12}>
 					<TutorProfile id={match.params.id} />

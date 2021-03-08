@@ -51,7 +51,6 @@ const useStyle = () => {
 		},
 	});
 }
-
 const App = () => {
 	useEffect(() => {
 		store.dispatch(loadUser());

@@ -41,7 +41,7 @@ const theme = createMuiTheme({
 		},
 	},
 });
-const useStyle = () => {
+const useStyle = () =>
 	makeStyles({
 		image: {
 			backgroundImage: `url(${Image})`,
@@ -50,8 +50,7 @@ const useStyle = () => {
 			paddingTop: '100px',
 		},
 	});
-}
-
+const classes = useStyle();
 const App = () => {
 	useEffect(() => {
 		store.dispatch(loadUser());

@@ -50,8 +50,6 @@ const useStyle = () => {
 			paddingTop: '100px',
 		},
 	});
-}
-
 const App = () => {
 	useEffect(() => {
 		store.dispatch(loadUser());

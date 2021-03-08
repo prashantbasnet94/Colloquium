@@ -45,7 +45,7 @@ const Login = ({ setAlert, login, isAuthenticated }) => {
 	const classes = useStyles();
 	const [formData, setFormData] = useState({
 		email: 'silvinpradhan95@gmail.com',
-		password: '111111',
+		password: '',
 	});
 	const { email, password } = formData;
 	const change = (e) =>

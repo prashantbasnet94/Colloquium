@@ -34,14 +34,15 @@ const Ques = ({ loadQuestionById, match, userQuestions, loading, user }) => {
 	// console.log(match);
 	const classes = useStyles();
 
+	const newLocal = <Link to="/create-question" style={{ textDecoration: 'none' }}>
+		<Button style={{ background: 'green', color: 'white' }}>
+			Add Event
+		</Button>
+	</Link>;
 	return !loading ? (
 		<div className={classes.root}>
 			{/* {user._id ? ( */}
-			<Link to="/create-question" style={{ textDecoration: 'none' }}>
-				<Button style={{ background: 'green', color: 'white' }}>
-					Add Event
-					</Button>
-			</Link>
+			{newLocal}
 			{/* ) : (
 				<p></p>
 			)} */}

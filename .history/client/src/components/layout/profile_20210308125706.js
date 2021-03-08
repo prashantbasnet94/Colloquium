@@ -37,11 +37,11 @@ const Ques = ({ loadQuestionById, match, userQuestions, loading, user }) => {
 	return !loading ? (
 		<div className={classes.root}>
 			{/* {user._id ? ( */}
-			<Link to="/create-question" style={{ textDecoration: 'none' }}>
-				<Button style={{ background: 'green', color: 'white' }}>
-					Add Event
+				<Link to="/create-question" style={{ textDecoration: 'none' }}>
+					<Button style={{ background: 'green', color: 'white' }}>
+						Add Event
 					</Button>
-			</Link>
+				</Link>
 			{/* ) : (
 				<p></p>
 			)} */}
@@ -78,8 +78,8 @@ const Ques = ({ loadQuestionById, match, userQuestions, loading, user }) => {
 											{user && user._id == ques.user ? (
 												<Delete questionId={ques._id} />
 											) : (
-													<p></p>
-												)}
+												<p></p>
+											)}
 										</TableRow>
 									))}
 							</TableBody>
@@ -89,8 +89,8 @@ const Ques = ({ loadQuestionById, match, userQuestions, loading, user }) => {
 			</Grid>
 		</div>
 	) : (
-			<CircularProgress disableShrink />
-		);
+		<CircularProgress disableShrink />
+	);
 };
 
 Ques.propTypes = {
