@@ -39,6 +39,13 @@ const Questioninfo = (props) => {
 		setFormData({ ...formData, content: '' });
 	};
 
+	 const getWindowHeight=()=>{
+		return Math.max(
+			document.documentElement.clientHeight,
+			window.innerHeight || 0
+		);
+	}
+
 	return (
 		<Container component="main">
 			<p>Please upvote the answer you think was helful.</p>
@@ -57,9 +64,10 @@ const Questioninfo = (props) => {
 
 						</Paper>
 						<Grid item xs={12}>
+							{/* sets the height of the iframe to half the size of screen height*/}
 							<Iframe url={ques.link}
-									width="450px"
-									height="450px"
+									width="100%"
+									height={getWindowHeight()/2}
 									id="myId"
 									className="myClassname"
 									display="initial"
