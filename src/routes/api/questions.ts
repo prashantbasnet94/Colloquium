@@ -17,7 +17,7 @@ router.post(
 		check('link', 'Link is required').not().isEmpty(),
 	],
 	async (req: any, res: any) => {
-		const { subject, section, problem, link } = req.body;
+		const { subject, section, problem, link,image } = req.body;
 		let user = await User.findById(res.locals.user.id).select('-password');
 		const errors = validationResult(req);
 		if (errors.isEmpty()) {
@@ -29,6 +29,7 @@ router.post(
 					section,
 					problem,
 					link,
+					image:image,
 					comment: [],
 				});
 				await question.save();

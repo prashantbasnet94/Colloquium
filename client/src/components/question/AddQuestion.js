@@ -5,6 +5,7 @@ import { Link, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import Help from '@material-ui/icons/Help';
+import {ImageUpload} from "./ImageUpload";
 import {
 	Avatar,
 	TextField,
@@ -43,14 +44,20 @@ const AddQuestion = ({ oneq, submitQuestion }) => {
 		section: '',
 		problem: '',
 		link: '',
+		image:''
 	});
 	const { subject, section, problem, link } = formData;
 	const change = (e) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
 	};
+	
+	const imageUploadUrl = useSelector(state=>state.imageUpload.url[0]);
+	
 	const onSubmit = async (e) => {
 		e.preventDefault();
-		submitQuestion({ subject, section, problem, link });
+		setFormData({...formData,image:imageUploadUrl});
+		alert(formData.image)
+		submitQuestion({ subject, section, problem, link,image });
 	};
 
 	if (!oneq) {
@@ -116,6 +123,7 @@ const AddQuestion = ({ oneq, submitQuestion }) => {
 						}}
 					/>
 
+					<ImageUpload/>
 					<Button type="submit" variant="contained" className={classes.submit}>
 						Ask
 					</Button>

@@ -33,7 +33,7 @@ export const loadQuestionById = ({ id }) => async (dispatch) => {
 	}
 };
 
-export const submitQuestion = ({ subject, section, problem, link }) => async (
+export const submitQuestion = ({ subject, section, problem, link,image }) => async (
 	dispatch
 ) => {
 	const config = {
@@ -41,7 +41,7 @@ export const submitQuestion = ({ subject, section, problem, link }) => async (
 			'Content-Type': 'application/json',
 		},
 	};
-	const body = { subject, section, problem, link };
+	const body = { subject, section, problem, link ,image};
 	try {
 		const res = await axios.post('api/questions', body, config);
 		dispatch({

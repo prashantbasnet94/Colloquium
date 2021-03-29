@@ -11,6 +11,7 @@ import tutorList from './tutorList';
 import tutor from './tutor';
 import userName from './userName';
 import search from './search';
+import imageUpload from './imageUpload';
 const persistConfig = {
 	key: 'root',
 	storage,
@@ -24,6 +25,7 @@ const persistConfig = {
 		'tutor',
 		'userName',
 		'search',
+		'imageUpload'
 	],
 };
 
@@ -38,6 +40,7 @@ const rootReducer = combineReducers({
 	tutor,
 	userName,
 	search,
+	imageUpload
 });
 
 export default persistReducer(persistConfig, rootReducer);

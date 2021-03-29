@@ -15,6 +15,7 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import Container from '@material-ui/core/Container';
 import Comment from './Comment';
 import Iframe from 'react-iframe'
+import {Image} from "@material-ui/icons";
 
 const Questioninfo = (props) => {
 	// useEffect(() => {
@@ -61,6 +62,7 @@ const Questioninfo = (props) => {
 							<h1 className="ques text-primary">{ques.problem}</h1>
 							<p className={classes.textel}>Asked</p>
 							<p className={classes.texttel2}>subject {ques.subject}</p>
+							<img  style={{height:800,width:800}} src="https://firebasestorage.googleapis.com/v0/b/lubhu-279204.appspot.com/o/colloquial%2Fg6NXrpQArB2R2fwjFwebzj.jpg?alt=media&token=e0a1581e-b7f3-4ee0-b667-b2bb8fa583d2"/>
 
 						</Paper>
 						<Grid item xs={12}>
