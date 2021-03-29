@@ -101,7 +101,7 @@ const Login = ({ setAlert, login, isAuthenticated }) => {
 			console.log(result)
 			dispatch({
 				type: O_AUTH,
-				payload: { email: user.email, token: idTokenResult.token }
+				payload: { currentUser: user, email: user.email, token: idTokenResult.token }
 			})
 		})
 		// if (dispatch(oAuth())) {

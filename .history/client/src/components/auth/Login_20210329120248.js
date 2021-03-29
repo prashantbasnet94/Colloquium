@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Login = ({ setAlert, login, isAuthenticated }) => {
-	const dispatch = useDispatch(AuthContext);
+	const dispatch  = useDispatch(AuthContext);
 
 	const classes = useStyles();
 	const [formData, setFormData] = useState({

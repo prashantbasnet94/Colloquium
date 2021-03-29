@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Login = ({ setAlert, login, isAuthenticated }) => {
-	const dispatch = useDispatch(AuthContext);
+	const dispatch  = useDispatch(AuthContext);
 
 	const classes = useStyles();
 	const [formData, setFormData] = useState({
@@ -98,7 +98,7 @@ const Login = ({ setAlert, login, isAuthenticated }) => {
 		auth.signInWithPopup(googleAuthProvider).then(async result => {
 			const { user } = result;
 			const idTokenResult = await user.getIdTokenResult();
-			console.log(result)
+			const 
 			dispatch({
 				type: O_AUTH,
 				payload: { email: user.email, token: idTokenResult.token }
