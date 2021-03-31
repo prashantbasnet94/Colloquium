@@ -53,7 +53,6 @@ const AuthProvider = ({ children }) => {
 				dispatch({
 					type: O_AUTH,
 					payload: {
-						user: user.displayName,
 						email: user.email, token: idToken.token
 					}
 				})

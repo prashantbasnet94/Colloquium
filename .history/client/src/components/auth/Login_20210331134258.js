@@ -96,7 +96,7 @@ const Login = ({ setAlert, login, isAuthenticated }) => {
 	const history = useHistory();
 	const loginWithGoogle = () => {
 		auth.signInWithPopup(googleAuthProvider).then(async result => {
-			const { user } = result.user.uid;
+			const { user } = user.user
 			const idTokenResult = await user.getIdTokenResult();
 			console.log(result)
 			dispatch({

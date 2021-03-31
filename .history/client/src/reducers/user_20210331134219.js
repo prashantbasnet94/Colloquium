@@ -49,11 +49,11 @@ const AuthProvider = ({ children }) => {
 	useEffect(() => {
 		const unsubscribe = auth.onAuthStateChanged(async user => {
 			if (user) {
+				const { user } = result.user.uid;
 				const idToken = await user.getIdTokenResult();
 				dispatch({
 					type: O_AUTH,
 					payload: {
-						user: user.displayName,
 						email: user.email, token: idToken.token
 					}
 				})
