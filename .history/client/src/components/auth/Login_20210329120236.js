@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Login = ({ setAlert, login, isAuthenticated }) => {
-	const dispatch = useDispatch(AuthContext);
+	const dispatch  = useDispatch(AuthContext);
 
 	const classes = useStyles();
 	const [formData, setFormData] = useState({
@@ -96,12 +96,12 @@ const Login = ({ setAlert, login, isAuthenticated }) => {
 	const history = useHistory();
 	const loginWithGoogle = () => {
 		auth.signInWithPopup(googleAuthProvider).then(async result => {
-			const { user } = result.user.uid;
+			const { user } = result;
 			const idTokenResult = await user.getIdTokenResult();
-			console.log(result)
+			const 
 			dispatch({
 				type: O_AUTH,
-				payload: { user: result.user.displayName, email: user.email, token: idTokenResult.token }
+				payload: { email: user.email, token: idTokenResult.token }
 			})
 		})
 		// if (dispatch(oAuth())) {

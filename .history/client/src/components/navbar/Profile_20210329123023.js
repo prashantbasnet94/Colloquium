@@ -1,7 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { AuthContext } from '../../reducers/user'
 import { connect } from 'react-redux';
 import { loadUser } from '../../actions/user';
 import { CircularProgress, Container, Button } from '@material-ui/core';
@@ -11,7 +10,6 @@ const Profile = ({ user, loadUser }) => {
 			loadUser();
 		}
 	}, []);
-	const { state, dispatch } = useContext(AuthContext);
 
 	return user ? (
 		<Link
@@ -19,7 +17,7 @@ const Profile = ({ user, loadUser }) => {
 			style={{ textDecoration: 'none', color: 'white' }}
 		>
 			<i className="fas fa-user"> </i>
-			<span>{user.name || user.email} </span>{' '}
+			<span>{user.name || user.} </span>{' '}
 		</Link>
 	) : (
 		<CircularProgress></CircularProgress>

@@ -11,7 +11,6 @@ const Profile = ({ user, loadUser }) => {
 			loadUser();
 		}
 	}, []);
-	const { state, dispatch } = useContext(AuthContext);
 
 	return user ? (
 		<Link

@@ -18,8 +18,8 @@ const Profile = ({ user, loadUser }) => {
 			to={`/profile/${user._id}`}
 			style={{ textDecoration: 'none', color: 'white' }}
 		>
-			<i className="fas fa-user"> </i>
-			<span>{user.name || user.email} </span>{' '}
+			<i className="fas fa-user"> </i>ß
+			<span>{user.name || JSON.stringify(state.user.email)} </span>{' '}
 		</Link>
 	) : (
 		<CircularProgress></CircularProgress>

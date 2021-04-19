@@ -42,6 +42,7 @@ export const oAuth = () => (dispatch) => {
 	try {
 		auth.signInWithPopup(googleAuthProvider).then(async result => {
 			const { user } = result;
+			console.log(resultß);
 			const idTokenResult = await user.getIdTokenResult();
 			dispatch({
 				type: O_AUTH,

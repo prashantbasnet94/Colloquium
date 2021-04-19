@@ -6,6 +6,7 @@ import { connect, useDispatch } from 'react-redux';
 import { setAlert } from '../../actions/alert';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import { login, oAuth } from '../../actions/auth';
+import {} from '@use-firebase'
 import {
 	Button,
 	FormControl,
@@ -96,12 +97,12 @@ const Login = ({ setAlert, login, isAuthenticated }) => {
 	const history = useHistory();
 	const loginWithGoogle = () => {
 		auth.signInWithPopup(googleAuthProvider).then(async result => {
-			const { user } = result.user.uid;
+			const { user } = result;
 			const idTokenResult = await user.getIdTokenResult();
 			console.log(result)
 			dispatch({
 				type: O_AUTH,
-				payload: { user: result.user.displayName, email: user.email, token: idTokenResult.token }
+				payload: { email: user.email, token: idTokenResult.token }
 			})
 		})
 		// if (dispatch(oAuth())) {

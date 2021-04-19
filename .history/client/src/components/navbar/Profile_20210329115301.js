@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, use } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { AuthContext } from '../../reducers/user'
@@ -19,7 +19,7 @@ const Profile = ({ user, loadUser }) => {
 			style={{ textDecoration: 'none', color: 'white' }}
 		>
 			<i className="fas fa-user"> </i>
-			<span>{user.name || user.email} </span>{' '}
+			<span>{user.name} </span>{' '}
 		</Link>
 	) : (
 		<CircularProgress></CircularProgress>

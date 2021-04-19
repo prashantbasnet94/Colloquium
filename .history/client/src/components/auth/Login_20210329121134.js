@@ -96,12 +96,12 @@ const Login = ({ setAlert, login, isAuthenticated }) => {
 	const history = useHistory();
 	const loginWithGoogle = () => {
 		auth.signInWithPopup(googleAuthProvider).then(async result => {
-			const { user } = result.user.uid;
+			const { user } = result;
 			const idTokenResult = await user.getIdTokenResult();
 			console.log(result)
 			dispatch({
 				type: O_AUTH,
-				payload: { user: result.user.displayName, email: user.email, token: idTokenResult.token }
+				payload: { currentUser: user, email: user.email, token: idTokenResult.token }
 			})
 		})
 		// if (dispatch(oAuth())) {

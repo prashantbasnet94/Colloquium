@@ -19,7 +19,7 @@ const Profile = ({ user, loadUser }) => {
 			style={{ textDecoration: 'none', color: 'white' }}
 		>
 			<i className="fas fa-user"> </i>
-			<span>{user.name || user.email} </span>{' '}
+			<span>{user.name || user.email || user} </span>{' '}
 		</Link>
 	) : (
 		<CircularProgress></CircularProgress>
