@@ -61,6 +61,7 @@ const Questioninfo = (props) => {
 							<h1 className="ques text-primary">{ques.problem}</h1>
 							<p className={classes.textel}>Asked</p>
 							<p className={classes.texttel2}>subject {ques.subject}</p>
+							<img  style={{height:'50%',width:'50%'}} src="http://www.southeastern.edu/news_media/news_releases/2018/march/images/tracy_k_smith.jpg"/>
 
 						</Paper>
 						<Grid item xs={12}>

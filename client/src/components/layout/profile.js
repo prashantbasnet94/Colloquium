@@ -17,7 +17,12 @@ import TutorProfile from '../tutor/TutorProfile';
 import Paper from '@material-ui/core/Paper';
 import { Grid } from '@material-ui/core';
 import Delete from '../question/Delete';
-
+import Sections from "../card/index"
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import Divider from "@material-ui/core/Divider";
+import CategoryOutlinedIcon from '@material-ui/icons/CategoryOutlined';
 const useStyles = makeStyles((theme) => ({
 	table: {
 		minWidth: 50,
@@ -34,6 +39,17 @@ const Ques = ({ loadQuestionById, match, userQuestions, loading, user }) => {
 	// console.log(match);
 	const classes = useStyles();
 
+	//gets the section all in all
+	let sections= new Set();
+	userQuestions.forEach((item )=>{
+		sections.add(item.section)
+
+	})
+	console.log(sections)
+	
+	// sections= Object.entries(sections.entries())
+	sections=[...sections]
+	 
 	return !loading ? (
 		<div className={classes.root}>
 			{/* {user._id ? ( */}
@@ -46,10 +62,39 @@ const Ques = ({ loadQuestionById, match, userQuestions, loading, user }) => {
 				<p></p>
 			)} */}
 			<Grid container spacing={4}>
-				<Grid item lg={4} md={6} xl={4} xs={12}>
+				<Grid item lg={6} md={6} xl={4} xs={12}>
 					<TutorProfile id={match.params.id} />
 				</Grid>
-				<Grid item lg={8} md={6} xl={8} xs={12}>
+
+				<Grid container lg={6} md={6} xl={8} xs={12}>
+					{/*<Sections/>*/}
+					{/*<Sections/>*/}
+					{/*<Sections/>*/}
+					{/*<Sections/>*/}
+					{/*<Sections/>*/}
+					{/*<Sections/>*/}
+					{/*<Sections/>*/}
+					{/*<Sections/>*/}
+
+		
+					<Grid item lg={6} md={6} xl={6} xs={12}>
+						<List component="nav" className={classes.root} aria-label="mailbox folders">
+							{sections.map((item)=>{return (
+								<>
+									<ListItem button>
+										#
+										<ListItemText primary={item.toString()} />
+									</ListItem>
+									<Divider light/>
+								</>
+							)})}
+
+						</List>
+					</Grid>
+				</Grid>
+				
+				
+				<Grid item >
 					<TableContainer component={Paper}>
 						<Table className={classes.table} aria-label="simple table">
 							<TableHead>
@@ -85,6 +130,8 @@ const Ques = ({ loadQuestionById, match, userQuestions, loading, user }) => {
 							</TableBody>
 						</Table>
 					</TableContainer>
+					
+					
 				</Grid>
 			</Grid>
 		</div>
